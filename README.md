@@ -20,6 +20,9 @@ involving cryptocurrency:
 > (like 2 bitcoin) to anyone who sends a smaller amount of currency (like 0.02 
 > bitcoin) to a particular wallet. 
 
+The issue was (as far as we can tell) first reported by [@TinkerSec](https://twitter.com/TinkerSec).
+A screengrab of his tweet can be found in [docs](/docs/).
+
 This program attempts to identify all such possible handles, and reports those
 that exist, along with brief account stats. The scammers accounts share certain
 traits: they have been created recently, have very few tweets, followers, and 
@@ -129,6 +132,9 @@ Issues
 ------
 Given the rate-limit restrictions on the API, checking each username is time 
 consuming.
+
+The algorithm does not try to be aggresive: shorter usernames are not expanded
+to the full 15 character limit.
 
 The algorithm may list genuine, and even irrelevant usernames. The number of 
 tweets; friend- and follower counts are some key parameters that can help 
